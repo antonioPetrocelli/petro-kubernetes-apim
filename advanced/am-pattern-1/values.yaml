@@ -108,7 +108,7 @@ wso2:
         management:
           enabled: true
           # Hostname for API Manager Carbon Management Console, Publisher, DevPortal and Admin Portal
-          hostname: "am.wso2.com"
+          hostname: "am.tecnocasa.com"
           # Annotations for the API Manager Publisher-DevPortal services Ingress
           annotations:
             spec.ingressClassName: "nginx"
@@ -119,21 +119,21 @@ wso2:
         gateway:
           enabled: true
           # Hostname for Gateway profile
-          hostname: "gateway.am.wso2.com"
+          hostname: "amgateway.tecnocasa.com"
           # Annotations for the API Manager Gateway service Ingress
           annotations:
             spec.ingressClassName: "nginx"
             nginx.ingress.kubernetes.io/backend-protocol: "HTTPS"
         websub:
           enabled: true
-          hostname: "websub.am.wso2.com"
+          hostname: "websub.am.tecnocasa.com"
           # Annotations for the API Manager WebSub service Ingress
           annotations:
             spec.ingressClassName: "nginx"
             nginx.ingress.kubernetes.io/backend-protocol: "HTTPS"
         websocket:
           enabled: true
-          hostname: "websocket.am.wso2.com"
+          hostname: "websocket.am.tecnocasa.com"
           # Annotations for the API Manager WebSocket service Ingress
           annotations:
             spec.ingressClassName: "nginx"
@@ -208,7 +208,7 @@ wso2:
         # Configure management ingress
         management:
           # Hostname for the Micro Integrator management endpoint.
-          hostname: "management.mi.wso2.com"
+          hostname: "mimanagement.tecnocasa.com"
           # Annotations for the Micro Integrator management Ingress.
           annotations:
             spec.ingressClassName: "nginx"

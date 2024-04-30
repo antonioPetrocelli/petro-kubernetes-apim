@@ -298,13 +298,13 @@ If you do not have an active WSO2 subscription, **do not change** the parameters
 | `am-pattern-1.wso2.deployment.am.resources.limits.cpu`                                   | The maximum amount of CPU that should be allocated for a Pod                              | 3000m                       |
 | `am-pattern-1.wso2.deployment.am.config`                                                 | Custom deployment configuration file (`<WSO2AM>/repository/conf/deployment.toml`)         | -                           |
 | `am-pattern-1.wso2.deployment.am.ingress.management.enabled`                            | If enabled, create ingress resource for API Manager management consoles  | true          |
-| `am-pattern-1.wso2.deployment.am.ingress.management.hostname`                            | Hostname for API Manager Admin Portal, Publisher, DevPortal and Carbon Management Console | `am.wso2.com`               |
+| `am-pattern-1.wso2.deployment.am.ingress.management.hostname`                            | Hostname for API Manager Admin Portal, Publisher, DevPortal and Carbon Management Console | `am.tecnocasa.com`               |
 | `am-pattern-1.wso2.deployment.am.ingress.management.annotations`                         | Ingress resource annotations for API Manager management consoles                          | Community NGINX Ingress controller annotations         |
 | `am-pattern-1.wso2.deployment.am.ingress.gateway.enabled`                            | If enabled, create ingress resource for API Manager Gateway  | true          |
-| `am-pattern-1.wso2.deployment.am.ingress.gateway.hostname`                               | Hostname for API Manager Gateway                                                          | `gateway.am.wso2.com`       |
+| `am-pattern-1.wso2.deployment.am.ingress.gateway.hostname`                               | Hostname for API Manager Gateway                                                          | `amgateway.tecnocasa.com`       |
 | `am-pattern-1.wso2.deployment.am.ingress.gateway.annotations`                            | Ingress resource annotations for API Manager Gateway                                      | Community NGINX Ingress controller annotations         |
 | `am-pattern-1.wso2.deployment.am.ingress.websub.enabled`                            | If enabled, create ingress resource for WebSub service  | true          |
-| `am-pattern-1.wso2.deployment.am.ingress.websub.hostname`                                | Hostname for API Manager Websub services                                                  | `websub.am.wso2.com`        |
+| `am-pattern-1.wso2.deployment.am.ingress.websub.hostname`                                | Hostname for API Manager Websub services                                                  | `websub.am.tecnocasa.com`        |
 | `am-pattern-1.wso2.deployment.am.ingress.websub.annotations`                             | Ingress resource annotations for API Manager Websub                                       | Community NGINX Ingress controller annotations         |
 
 #### Micro Integrator Server Configurations for Tenant 1
@@ -323,7 +323,7 @@ If you do not have an active WSO2 subscription, **do not change** the parameters
 | `am-pattern-1.wso2.deployment.mi.resources.requests.cpu`                                 | The minimum amount of CPU that should be allocated for a Pod                              | 500m                        |
 | `am-pattern-1.wso2.deployment.mi.resources.limits.memory`                                | The maximum amount of memory that should be allocated for a Pod                           | 1Gi                         |
 | `am-pattern-1.wso2.deployment.mi.resources.limits.cpu`                                   | The maximum amount of CPU that should be allocated for a Pod                              | 1000m                       |
-| `am-pattern-1.wso2.deployment.mi.ingress.management.hostname`                            | Hostname for Micro Integrator management apis                                             | `management.mi.wso2.com`    |
+| `am-pattern-1.wso2.deployment.mi.ingress.management.hostname`                            | Hostname for Micro Integrator management apis                                             | `mimanagement.tecnocasa.com`    |
 | `am-pattern-1.wso2.deployment.mi.ingress.management.annotations`                         | Ingress resource annotations for API Manager Gateway                                      | Community NGINX Ingress controller annotations         |
 
 #### Micro Integrator Server Configurations for Tenant 2
@@ -343,7 +343,7 @@ If you do not have an active WSO2 subscription, **do not change** the parameters
 | `wso2.deployment.mi.resources.limits.memory`                                | The maximum amount of memory that should be allocated for a Pod                           | 1Gi                         |
 | `wso2.deployment.mi.resources.limits.cpu`                                   | The maximum amount of CPU that should be allocated for a Pod                              | 1000m                       |
 | `wso2.deployment.mi.config`                                                 | Custom deployment configuration file (`<WSO2MI>/conf/deployment.toml`)         | -                           |
-| `wso2.deployment.mi.ingress.management.hostname`                            | Hostname for Micro Integrator management apis                                             | `management.mi.wso2.com`    |
+| `wso2.deployment.mi.ingress.management.hostname`                            | Hostname for Micro Integrator management apis                                             | `mimanagement.tecnocasa.com`    |
 | `wso2.deployment.mi.ingress.management.annotations`                         | Ingress resource annotations for API Manager Gateway                                      | Community NGINX Ingress controller annotations         |
 
 

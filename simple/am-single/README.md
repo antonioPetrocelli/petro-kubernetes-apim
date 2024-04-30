@@ -242,13 +242,13 @@ If you do not have an active WSO2 subscription, **do not change** the parameters
 | `wso2.deployment.am.resources.limits.cpu`                                   | The maximum amount of CPU that should be allocated for a Pod                              | 3000m                       |
 | `wso2.deployment.am.config`                                                 | Custom deployment configuration file (`<WSO2AM>/repository/conf/deployment.toml`)         | -                           |
 | `wso2.deployment.am.ingress.management.enabled`                            | If enabled, create ingress resource for API Manager management consoles  | true          |
-| `wso2.deployment.am.ingress.management.hostname`                            | Hostname for API Manager Admin Portal, Publisher, DevPortal and Carbon Management Console | `am.wso2.com`               |
+| `wso2.deployment.am.ingress.management.hostname`                            | Hostname for API Manager Admin Portal, Publisher, DevPortal and Carbon Management Console | `am.tecnocasa.com`               |
 | `wso2.deployment.am.ingress.management.annotations`                         | Ingress resource annotations for API Manager management consoles                          | Community NGINX Ingress controller annotations         |
 | `wso2.deployment.am.ingress.gateway.enabled`                            | If enabled, create ingress resource for API Manager Gateway  | true          |
-| `wso2.deployment.am.ingress.gateway.hostname`                               | Hostname for API Manager Gateway                                                          | `gateway.am.wso2.com`       |
+| `wso2.deployment.am.ingress.gateway.hostname`                               | Hostname for API Manager Gateway                                                          | `amgateway.tecnocasa.com`       |
 | `wso2.deployment.am.ingress.gateway.annotations`                            | Ingress resource annotations for API Manager Gateway                                      | Community NGINX Ingress controller annotations         |
 | `wso2.deployment.am.ingress.websub.enabled`                            | If enabled, create ingress resource for WebSub service  | true          |
-| `wso2.deployment.am.ingress.websub.hostname`                               | Hostname for API Manager Gateway WebSub service                                                          | `gateway.am.wso2.com`       |
+| `wso2.deployment.am.ingress.websub.hostname`                               | Hostname for API Manager Gateway WebSub service                                                          | `amgateway.tecnocasa.com`       |
 | `wso2.deployment.am.ingress.websub.annotations`                            | Ingress resource annotations for API Manager Gateway WebSub                                     | Community NGINX Ingress controller annotations         |
 
 **Note**: The above mentioned default, minimum resource amounts for running WSO2 API Manager server profiles are based on its [official documentation](https://apim.docs.wso2.com/en/4.2.0/install-and-setup/install/installation-prerequisites/).

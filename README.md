@@ -27,7 +27,7 @@ Use these artifacts as a reference to build your deployment artifacts. Existing 
 
 The JWKS endpoint of the API Manager has the external facing hostname by default. This is not routable. To resolve this, you can alter the JWKS endpoint in the API Manager to use the API Manager's internal service name in Kubernetes.
 
-1. Log into Admin portal - https://am.wso2.com/admin/
+1. Log into Admin portal - https://am.tecnocasa.com/admin/
 2. Navigate to Key Managers section and select the Resident Key Manager.
 3. Change the JWKS URL in the Certificates section to `https://<cp-lb-service-name>:9443/oauth2/jwks`
 

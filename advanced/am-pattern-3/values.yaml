@@ -112,7 +112,7 @@ wso2:
           # Name of the IngressClass to use
           className: ""
           # Hostname for Gateway (WebSub) service
-          hostname: "websub.am.wso2.com"
+          hostname: "websub.am.tecnocasa.com"
           # Annotations for the API Manager Gateway (WebSub) service Ingress
           annotations:
             spec.ingressClassName: "nginx"
@@ -125,7 +125,7 @@ wso2:
           # Name of the IngressClass to use
           className: ""
           # Hostname for Gateway (WebSocket) service
-          hostname: "websocket.am.wso2.com"
+          hostname: "websocket.am.tecnocasa.com"
           # Annotations for the API Manager Gateway (WebSocket) service Ingress
           annotations:
             spec.ingressClassName: "nginx"
@@ -139,7 +139,7 @@ wso2:
           # Name of the IngressClass to use
           className: ""
           # Hostname for Gateway profile
-          hostname: "gateway.am.wso2.com"
+          hostname: "amgateway.tecnocasa.com"
           # Annotations for the API Manager Gateway service Ingress
           annotations:
             spec.ingressClassName: "nginx"
@@ -204,7 +204,7 @@ wso2:
           # Name of the IngressClass to use
           className: ""
           # Hostname for Control Plane profile
-          hostname: "am.wso2.com"
+          hostname: "am.tecnocasa.com"
           # Annotations for the API Manager Control Plane service Ingress
           annotations:
             spec.ingressClassName: "nginx"
@@ -304,7 +304,7 @@ wso2:
         # Configure management ingress
         management:
           # Hostname for the Micro Integrator management endpoint.
-          hostname: "management.mi.wso2.com"
+          hostname: "mimanagement.tecnocasa.com"
           # Annotations for the Micro Integrator management Ingress.
           annotations:
             spec.ingressClassName: "nginx"
