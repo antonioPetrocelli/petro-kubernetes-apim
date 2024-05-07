@@ -57,9 +57,14 @@ wso2:
     am:
       # Container image configurations
       # If a custom image must be used, uncomment 'dockerRegistry' and provide its value
-      dockerRegistry: "docker.wso2.com"
-      imageName: "wso2am"
-      imageTag: "4.2.0.0"
+      # dockerRegistry: "docker.wso2.com"
+      # imageName: "wso2am"
+      # imageTag: "4.2.0.0"
+      # docker pull docker.io/petroanvasys/wso2am:4.2.0-centos
+      dockerRegistry: "docker.io"
+      imageName: "petroanvasys/wso2am"
+      imageTag: "4.2.0-centos"
+      imagePullSecrets: "petro.anvasys.reg.cred"
       # Refer to the Kubernetes documentation on updating images (https://kubernetes.io/docs/concepts/containers/images/#updating-images)
       imagePullPolicy: Always
 
@@ -154,10 +159,18 @@ wso2:
           url: jdbc:mysql://wso2am-mysql-db-service:3306/WSO2AM_SHARED_DB?useSSL=false&amp;autoReconnect=true&amp;requireSSL=false&amp;verifyServerCertificate=false
 
     mi:
-      # If a custom image must be used, uncomment 'dockerRegistry' and provide its value.
-      dockerRegistry: "docker.wso2.com"
-      imageName: "wso2mi"
-      imageTag: "4.2.0.0"
+      # If a custom image must be used, uncomment 'dockerRegistry' and provide its value
+      # dockerRegistry: "docker.wso2.com"
+      # imageName: "wso2mi"
+      # imageTag: "4.2.0.0"
+      # docker pull docker.io/petroanvasys/wso2mi:4.2.0-centos
+      dockerRegistry: "docker.io"
+      imageName: "petroanvasys/wso2mi"
+      imageTag: "4.2.0-centos"
+      imagePullSecrets: "petro.anvasys.reg.cred"
+      # Refer to the Kubernetes documentation on updating images (https://kubernetes.io/docs/concepts/containers/images/#updating-images)
+      imagePullPolicy: Always
+
       # Number of deployment replicas
       replicas: 2
       strategy:
