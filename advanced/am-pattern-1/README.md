@@ -82,14 +82,14 @@ If you are using a custom WSO2 Docker images you will need to provide those info
 #### Install Chart From Source
 
 >In the context of this document, <br>
->* `KUBERNETES_HOME` will refer to a local copy of the [`wso2/kubernetes-apim`](https://github.com/wso2/kubernetes-apim/)
+>* `KUBERNETES_HOME` will refer to a local copy of the [`antonioPetrocelli/petro-kubernetes-apim`](https://github.com/antonioPetrocelli/petro-kubernetes-apim/)
 Git repository. <br>
 >* `HELM_HOME` will refer to `<KUBERNETES_HOME>/advanced`. <br>
 
 ##### Clone the Helm Resources for WSO2 API Manager Git repository.
 
 ```
-git clone https://github.com/wso2/kubernetes-apim.git
+git clone https://github.com/antonioPetrocelli/petro-kubernetes-apim.git
 ```
 
 ##### Deploy Helm chart for WSO2 API Manager Pattern 1 deployment.
@@ -119,7 +119,7 @@ Please see the following example.
 If you are using a custom WSO2 Docker images you will need to provide those information via the input values. Please refer [API Manager Server Configurations](#api-manager-server-configurations) and [Micro Integrator Server Configurations](#micro-integrator-server-configurations)
 
 
-Or else, you can configure the default configurations inside the am-pattern-1 helm chart [values.yaml](https://github.com/wso2/kubernetes-apim/blob/master/advanced/am-pattern-1/values.yaml) file. Refer [this](https://helm.sh/docs/chart_template_guide/values_files/) for to learn more details about the `values.yaml` file.
+Or else, you can configure the default configurations inside the am-pattern-1 helm chart [values.yaml](https://github.com/antonioPetrocelli/petro-kubernetes-apim/blob/master/advanced/am-pattern-1/values.yaml) file. Refer [this](https://helm.sh/docs/chart_template_guide/values_files/) for to learn more details about the `values.yaml` file.
     
 
 > **Note:** <br>
@@ -137,8 +137,8 @@ From the above Helm commands, base image of a Micro Integrator is deployed (with
 
 > **Note:**
 > If you are using Rancher Desktop for the Kubernetes cluster, add the following changes. 
-> 1. Change `storageClass` to `local-path` in [`values.yaml`](https://github.com/wso2/kubernetes-apim/blob/master/advanced/am-pattern-1/values.yaml#L43).
-> 2. Change `accessModes` in [`Persistent Volume Claims`](https://github.com/wso2/kubernetes-apim/blob/master/advanced/am-pattern-1/templates/am/wso2am-pattern-1-am-volume-claims.yaml) to `ReadWriteOnce`.
+> 1. Change `storageClass` to `local-path` in [`values.yaml`](https://github.com/antonioPetrocelli/petro-kubernetes-apim/blob/master/advanced/am-pattern-1/values.yaml#L43).
+> 2. Change `accessModes` in [`Persistent Volume Claims`](https://github.com/antonioPetrocelli/petro-kubernetes-apim/blob/master/advanced/am-pattern-1/templates/am/wso2am-pattern-1-am-volume-claims.yaml) to `ReadWriteOnce`.
 
 ### Choreo Analytics
 
@@ -358,7 +358,7 @@ If you want to setup API Manager only without Micro Integrator, you have to inst
 * Clone the repository
 
     ```
-    git clone https://github.com/wso2/kubernetes-apim.git
+    git clone https://github.com/antonioPetrocelli/petro-kubernetes-apim.git
     ```
 
 * Remove the MI templates by removing the `mi` folder in `<KUBERNETES_HOME>/advanced/am-pattern-1/templates/`.
