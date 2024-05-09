@@ -52,11 +52,8 @@ spec:
             - "-DsynapseTest=true"
           {{- end }}
           livenessProbe:
-            exec:
-              command:
-                - /bin/sh
-                - -c
-                - nc -z localhost 8290
+            tcpSocket:
+              port: 8290
             initialDelaySeconds: {{ .Values.wso2.deployment.mi.livenessProbe.initialDelaySeconds }}
             periodSeconds: {{ .Values.wso2.deployment.mi.livenessProbe.periodSeconds }}
           readinessProbe:
