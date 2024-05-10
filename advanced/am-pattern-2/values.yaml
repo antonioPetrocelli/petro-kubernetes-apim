@@ -194,7 +194,7 @@ am-pattern-1:
           gateway:
             enabled: true
             # Hostname for Gateway profile
-            hostname: "amgateway.tecnocasa.com"
+            hostname: "gw.tecnocasa.com.tecnocasa.com"
             # Annotations for the API Manager Gateway service Ingress
             annotations:
               spec.ingressClassName: "nginx"
