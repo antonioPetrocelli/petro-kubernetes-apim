@@ -140,7 +140,7 @@ wso2:
           # Name of the IngressClass to use
           className: ""
           # Hostname for Gateway profile
-          hostname: "gw.tecnocasa.com.tecnocasa.com"
+          hostname: "gw.tecnocasa.com"
           # Annotations for the API Manager Gateway service Ingress
           annotations:
             spec.ingressClassName: "nginx"

@@ -119,7 +119,7 @@ wso2:
         gateway:
           enabled: true
           # Hostname for Gateway profile
-          hostname: "gw.tecnocasa.com.tecnocasa.com"
+          hostname: "gw.tecnocasa.com"
           # Annotations for the API Manager Gateway service Ingress
           annotations:
             spec.ingressClassName: "nginx"

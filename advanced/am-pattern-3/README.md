@@ -266,7 +266,7 @@ If you do not have an active WSO2 subscription, **do not change** the parameters
 | `wso2.deployment.am.websub.ingress.hostname`                               | Hostname for API Manager WebSub service                                                          | `websub.am.tecnocasa.com`       |
 | `wso2.deployment.am.websub.ingress.annotations`                            | Ingress resource annotations for API Manager WebSub                                      | Community NGINX Ingress controller annotations       |
 | `wso2.deployment.am.gateway.ingress.enabled`                            | If enabled, create ingress resource for API Manager Gateway  | true          |
-| `wso2.deployment.am.gateway.ingress.hostname`                               | Hostname for API Manager Gateway                                                          | `gw.tecnocasa.com.tecnocasa.com`       |
+| `wso2.deployment.am.gateway.ingress.hostname`                               | Hostname for API Manager Gateway                                                          | `gw.tecnocasa.com`       |
 | `wso2.deployment.am.gateway.ingress.annotations`                            | Ingress resource annotations for API Manager Gateway                                      | Community NGINX Ingress controller annotations       |
 | `wso2.deployment.am.gateway.replicas`                                       | Number of replicas of API Manager Gateway to be started                                   | 2                           |
 | `wso2.deployment.am.gateway.strategy.rollingUpdate.maxSurge`                | Refer to [doc](https://v1-14.docs.kubernetes.io/docs/reference/generated/kubernetes-api/v1.14/#deploymentstrategy-v1-apps)  | 2                         |
