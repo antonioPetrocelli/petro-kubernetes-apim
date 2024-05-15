@@ -117,6 +117,8 @@ wso2:
           annotations:
             spec.ingressClassName: "nginx"
             nginx.ingress.kubernetes.io/backend-protocol: "HTTPS"
+          spec:
+            ingressClassName: "nginx"
       # API Manager's WebSocket specific configurations
       websocket:
         # Configure Ingress
@@ -130,6 +132,8 @@ wso2:
           annotations:
             spec.ingressClassName: "nginx"
             nginx.ingress.kubernetes.io/backend-protocol: "HTTPS"
+          spec:
+            ingressClassName: "nginx"
 
       # API Manager's Gateway specific configurations
       gateway:
@@ -144,6 +148,8 @@ wso2:
           annotations:
             spec.ingressClassName: "nginx"
             nginx.ingress.kubernetes.io/backend-protocol: "HTTPS"
+          spec:
+            ingressClassName: "nginx"
 
         # Number of deployment replicas
         replicas: 2
@@ -212,6 +218,8 @@ wso2:
             nginx.ingress.kubernetes.io/affinity: "cookie"
             nginx.ingress.kubernetes.io/session-cookie-name: "route"
             nginx.ingress.kubernetes.io/session-cookie-hash: "sha1"
+          spec:
+            ingressClassName: "nginx"
         # Number of deployment replicas
         replicas: 2
 
@@ -309,6 +317,8 @@ wso2:
           annotations:
             spec.ingressClassName: "nginx"
             nginx.ingress.kubernetes.io/backend-protocol: "HTTPS"
+          spec:
+            ingressClassName: "nginx"
 
 kubernetes:
   # Name of Kubernetes service account

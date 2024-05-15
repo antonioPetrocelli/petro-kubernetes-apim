@@ -81,6 +81,8 @@ wso2:
           annotations:
             spec.ingressClassName: "nginx"
             nginx.ingress.kubernetes.io/backend-protocol: "HTTPS"
+          spec:
+            ingressClassName: "nginx"
 
 kubernetes:
   # Name of Kubernetes service account
@@ -191,6 +193,8 @@ am-pattern-1:
               nginx.ingress.kubernetes.io/affinity: "cookie"
               nginx.ingress.kubernetes.io/session-cookie-name: "route"
               nginx.ingress.kubernetes.io/session-cookie-hash: "sha1"
+          spec:
+            ingressClassName: "nginx"
           gateway:
             enabled: true
             # Hostname for Gateway profile
@@ -199,6 +203,8 @@ am-pattern-1:
             annotations:
               spec.ingressClassName: "nginx"
               nginx.ingress.kubernetes.io/backend-protocol: "HTTPS"
+          spec:
+            ingressClassName: "nginx"
           websub:
             enabled: true
             hostname: "websub.am.tecnocasa.com"
@@ -206,6 +212,8 @@ am-pattern-1:
             annotations:
               spec.ingressClassName: "nginx"
               nginx.ingress.kubernetes.io/backend-protocol: "HTTPS"
+          spec:
+            ingressClassName: "nginx"
           websocket:
             enabled: true
             hostname: "websocket.am.tecnocasa.com"
@@ -213,6 +221,8 @@ am-pattern-1:
             annotations:
               spec.ingressClassName: "nginx"
               nginx.ingress.kubernetes.io/backend-protocol: "HTTPS"
+          spec:
+            ingressClassName: "nginx"
         db:
           hostname: wso2am-mysql-db-service
           port: 3306
@@ -282,6 +292,8 @@ am-pattern-1:
             annotations:
               spec.ingressClassName: "nginx"
               nginx.ingress.kubernetes.io/backend-protocol: "HTTPS"
+          spec:
+            ingressClassName: "nginx"
 
   kubernetes:
     # Name of Kubernetes service account
