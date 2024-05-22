@@ -92,6 +92,15 @@ Git repository. <br>
 git clone https://github.com/antonioPetrocelli/petro-kubernetes-apim.git
 ```
 
+##### Create a Docker Hub Secret for your Docker Hub Repository by providing credentials on the command line.
+[`create-a-secret-by-providing-credentials-on-the-command-line`](https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/#create-a-secret-by-providing-credentials-on-the-command-line)
+
+```
+docker login -u "<docker_username>" -p "<docker_password>" docker.io
+kubectl create namespace wso2
+kubectl create secret docker-registry petro.anvasys.reg.cred --docker-server=https://index.docker.io/v1/ --docker-username=<docker_username> --docker-password=<docker_password> --docker-email=<docker_email> -n wso2
+```
+
 ##### Deploy Helm chart for WSO2 API Manager Pattern 1 deployment.
 
 Deploy the Kubernetes resources using the Helm Chart
