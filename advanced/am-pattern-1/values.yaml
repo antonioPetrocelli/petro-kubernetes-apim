@@ -113,7 +113,7 @@ wso2:
         management:
           enabled: true
           # Hostname for API Manager Carbon Management Console, Publisher, DevPortal and Admin Portal
-          hostname: "am.tecnocasa.com"
+          hostname: "am.fritz.box"
           # Annotations for the API Manager Publisher-DevPortal services Ingress
           annotations:
             spec.ingressClassName: "nginx"
@@ -126,7 +126,7 @@ wso2:
         gateway:
           enabled: true
           # Hostname for Gateway profile
-          hostname: "gw.tecnocasa.com"
+          hostname: "gateway.am.fritz.box"
           # Annotations for the API Manager Gateway service Ingress
           annotations:
             spec.ingressClassName: "nginx"
@@ -135,7 +135,7 @@ wso2:
             ingressClassName: "nginx"
         websub:
           enabled: true
-          hostname: "websub.am.tecnocasa.com"
+          hostname: "websub.am.fritz.box"
           # Annotations for the API Manager WebSub service Ingress
           annotations:
             spec.ingressClassName: "nginx"
@@ -144,7 +144,7 @@ wso2:
             ingressClassName: "nginx"
         websocket:
           enabled: true
-          hostname: "websocket.am.tecnocasa.com"
+          hostname: "websocket.am.fritz.box"
           # Annotations for the API Manager WebSocket service Ingress
           annotations:
             spec.ingressClassName: "nginx"
@@ -227,7 +227,7 @@ wso2:
         # Configure management ingress
         management:
           # Hostname for the Micro Integrator management endpoint.
-          hostname: "mimanagement.tecnocasa.com"
+          hostname: "management.mi.fritz.box"
           # Annotations for the Micro Integrator management Ingress.
           annotations:
             spec.ingressClassName: "nginx"

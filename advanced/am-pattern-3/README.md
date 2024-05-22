@@ -263,10 +263,10 @@ If you do not have an active WSO2 subscription, **do not change** the parameters
 | `wso2.deployment.am.readinessProbe.initialDelaySeconds`                     | Initial delay for the readiness probe for API Manager optimized profile                   | 60                          |
 | `wso2.deployment.am.readinessProbe.periodSeconds`                           | Period of the readiness probe for API Manager optimized profile                           | 10                          |
 | `wso2.deployment.am.websub.ingress.enabled`                            | If enabled, create ingress resource for WebSub service  | true          |
-| `wso2.deployment.am.websub.ingress.hostname`                               | Hostname for API Manager WebSub service                                                          | `websub.am.tecnocasa.com`       |
+| `wso2.deployment.am.websub.ingress.hostname`                               | Hostname for API Manager WebSub service                                                          | `websub.am.fritz.box`       |
 | `wso2.deployment.am.websub.ingress.annotations`                            | Ingress resource annotations for API Manager WebSub                                      | Community NGINX Ingress controller annotations       |
 | `wso2.deployment.am.gateway.ingress.enabled`                            | If enabled, create ingress resource for API Manager Gateway  | true          |
-| `wso2.deployment.am.gateway.ingress.hostname`                               | Hostname for API Manager Gateway                                                          | `gw.tecnocasa.com`       |
+| `wso2.deployment.am.gateway.ingress.hostname`                               | Hostname for API Manager Gateway                                                          | `gateway.am.fritz.box`       |
 | `wso2.deployment.am.gateway.ingress.annotations`                            | Ingress resource annotations for API Manager Gateway                                      | Community NGINX Ingress controller annotations       |
 | `wso2.deployment.am.gateway.replicas`                                       | Number of replicas of API Manager Gateway to be started                                   | 2                           |
 | `wso2.deployment.am.gateway.strategy.rollingUpdate.maxSurge`                | Refer to [doc](https://v1-14.docs.kubernetes.io/docs/reference/generated/kubernetes-api/v1.14/#deploymentstrategy-v1-apps)  | 2                         |
@@ -277,7 +277,7 @@ If you do not have an active WSO2 subscription, **do not change** the parameters
 | `wso2.deployment.am.cp.readinessProbe.initialDelaySeconds`                     | Initial delay for the readiness probe for API Manager Control Plane profile                   | 60                          |
 | `wso2.deployment.am.cp.readinessProbe.periodSeconds`                           | Period of the readiness probe for API Manager Control Plane profile                           | 10                          |
 | `wso2.deployment.am.cp.ingress.enabled`                            | If enabled, create ingress resource for API Manager management consoles  | true          |
-| `wso2.deployment.am.cp.ingress.hostname`                             | Hostname for API Manager Control Plane                                                          | `am.tecnocasa.com`       |
+| `wso2.deployment.am.cp.ingress.hostname`                             | Hostname for API Manager Control Plane                                                          | `am.fritz.box`       |
 | `wso2.deployment.am.cp.ingress.annotations`                          | Ingress resource annotations for API Manager Control Plane                                      | Community NGINX Ingress controller annotations       |
 | `wso2.deployment.am.cp.resources.requests.memory`                              | The minimum amount of memory that should be allocated for running API Manager API Manager Control Plane  | 1Gi                         |
 | `wso2.deployment.am.cp.resources.requests.cpu`                                 | The minimum amount of CPU that should be allocated for running API ManagerAPI Manager Control Plane     | 1000m                       |
@@ -302,7 +302,7 @@ If you do not have an active WSO2 subscription, **do not change** the parameters
 | `wso2.deployment.mi.resources.limits.memory`                                | The maximum amount of memory that should be allocated for a Pod                           | 1Gi                         |
 | `wso2.deployment.mi.resources.limits.cpu`                                   | The maximum amount of CPU that should be allocated for a Pod                              | 1000m                       |
 | `wso2.deployment.mi.config`                                                 | Custom deployment configuration file (`<WSO2MI>/conf/deployment.toml`)         | -                           |
-| `wso2.deployment.mi.ingress.management.hostname`                            | Hostname for Micro Integrator management apis                                             | `mimanagement.tecnocasa.com`    |
+| `wso2.deployment.mi.ingress.management.hostname`                            | Hostname for Micro Integrator management apis                                             | `management.mi.fritz.box`    |
 | `wso2.deployment.mi.ingress.management.annotations`                         | Ingress resource annotations for API Manager Gateway                                      | Community NGINX Ingress controller annotations         |
 
 **Note**: The above mentioned default, minimum resource amounts for running WSO2 API Manager server profiles are based on its [official documentation](https://apim.docs.wso2.com/en/4.2.0/install-and-setup/install/installation-prerequisites/).
