@@ -2,10 +2,10 @@
 
 This deployment consists of two API-M nodes and two nodes each of the integration runtimes (Micro Integrator/Streaming Integrator) per tenant. You can use this pattern when traffic from different tenants in the API-M cluster needs to be handled in isolation. This deployment also allows you to direct the traffic of each tenant to a separate integration cluster.
 
-![WSO2 API Manager pattern 2 deployment](https://apim.docs.wso2.com/en/4.2.0/assets/img/setup-and-install/basic-ha-with-multitenancy.png)
+![WSO2 API Manager pattern 2 deployment](https://apim.docs.wso2.com/en/4.3.0/assets/img/setup-and-install/basic-ha-with-multitenancy.png)
 
 For advanced details on the deployment pattern, please refer to the official
-[documentation](https://apim.docs.wso2.com/en/4.2.0/install-and-setup/setup/deployment-overview/#standard-ha-deployment-with-multitenancy).
+[documentation](https://apim.docs.wso2.com/en/4.3.0/install-and-setup/setup/deployment-overview/#standard-ha-deployment-with-multitenancy).
 
 ## Contents
 
@@ -139,7 +139,7 @@ Or else, you can configure the default configurations inside the am-pattern-1 he
 
 > **Note:** <br>
 From the above Helm commands, base image of a Micro Integrator is deployed (without any integration solution). To deploy your integration solution with the Helm charts follow the below steps. <br><br>
->1. [Create an integration service using WSO2 Integration Studio and expose it as a Managed API](https://apim.docs.wso2.com/en/4.2.0/tutorials/integration-tutorials/service-catalog-tutorial/#exposing-an-integration-service-as-a-managed-api). Then [create a Docker image](https://apim.docs.wso2.com/en/4.2.0/integrate/develop/create-docker-project/#creating-docker-exporter) and push it to your private or public Docker registry. <br><br>
+>1. [Create an integration service using WSO2 Integration Studio and expose it as a Managed API](https://apim.docs.wso2.com/en/4.3.0/tutorials/integration-tutorials/service-catalog-tutorial/#exposing-an-integration-service-as-a-managed-api). Then [create a Docker image](https://apim.docs.wso2.com/en/4.3.0/integrate/develop/create-docker-project/#creating-docker-exporter) and push it to your private or public Docker registry. <br><br>
     - `INTEGRATION_IMAGE_REGISTRY` will refer to the Docker registry that created Docker image has been pushed <br>
     - `INTEGRATION_IMAGE_NAME` will refer to the name of the created Docker image <br>
     - `INTEGRATION_IMAGE_TAG` will refer to the tag of the created Docker image <br><br>
@@ -156,7 +156,7 @@ From the above Helm commands, base image of a Micro Integrator is deployed (with
 
 ### Choreo Analytics
 
-If you need to enable Choreo Analytics with WSO2 API Manager, please follow the documentation on [Register for Analytics](https://apim.docs.wso2.com/en/4.2.0/observe/api-manager-analytics/configure-analytics/register-for-analytics/) to obtain the on-prem key for Analytics.
+If you need to enable Choreo Analytics with WSO2 API Manager, please follow the documentation on [Register for Analytics](https://apim.docs.wso2.com/en/4.3.0/observe/api-manager-analytics/configure-analytics/register-for-analytics/) to obtain the on-prem key for Analytics.
 
 The following example shows how to enable Analytics with the helm charts.
 
@@ -347,7 +347,7 @@ If you do not have an active WSO2 subscription, **do not change** the parameters
 | `wso2.deployment.mi.ingress.management.annotations`                         | Ingress resource annotations for API Manager Gateway                                      | Community NGINX Ingress controller annotations         |
 
 
-**Note**: The above mentioned default, minimum resource amounts for running WSO2 API Manager server profiles are based on its [official documentation](https://apim.docs.wso2.com/en/4.2.0/install-and-setup/install/installation-prerequisites/).
+**Note**: The above mentioned default, minimum resource amounts for running WSO2 API Manager server profiles are based on its [official documentation](https://apim.docs.wso2.com/en/4.3.0/install-and-setup/install/installation-prerequisites/).
 
 #### Kubernetes Specific Configurations
 

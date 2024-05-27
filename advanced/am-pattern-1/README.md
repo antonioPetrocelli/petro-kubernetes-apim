@@ -2,10 +2,10 @@
 
 This deployment consists of an API-M cluster with two nodes of the API-M runtime and two nodes each of the integration runtimes (Micro Integrator/Streaming Integrator). You can use this pattern if you expect to receive low traffic to your deployment.
 
-![WSO2 API Manager pattern 1 deployment](https://apim.docs.wso2.com/en/4.2.0/assets/img/setup-and-install/basic-ha-deployment.png)
+![WSO2 API Manager pattern 1 deployment](https://apim.docs.wso2.com/en/4.3.0/assets/img/setup-and-install/basic-ha-deployment.png)
 
 For advanced details on the deployment pattern, please refer to the official
-[documentation](https://apim.docs.wso2.com/en/4.2.0/install-and-setup/setup/deployment-overview/#standard-ha-deployment).
+[documentation](https://apim.docs.wso2.com/en/4.3.0/install-and-setup/setup/deployment-overview/#standard-ha-deployment).
 
 ## Contents
 
