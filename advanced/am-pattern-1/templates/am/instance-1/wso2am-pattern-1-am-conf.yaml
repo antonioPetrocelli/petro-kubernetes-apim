@@ -63,7 +63,7 @@ data:
     alias =  "wso2carbon"
     key_password =  "wso2carbon"
 
-    #[keystore.listener_profile]	
+    #[keystore.listener_profile]
     #bind_address = "0.0.0.0"
 
     #[keystore.primary]
@@ -83,6 +83,7 @@ data:
     [[apim.gateway.environment]]
     name = "Default"
     type = "hybrid"
+    gateway_type = "Regular"
     provider = "wso2"
     display_in_api_console = true
     description = "This is a hybrid gateway that handles both production and sandbox token traffic."
@@ -140,7 +141,13 @@ data:
     auth_token = ""
     {{ end }}
 
-    #[apim.key_manager]
+    [apim.ai]
+    enable = true
+    token = ""
+    endpoint = ""
+
+    [apim.key_manager]
+    enable_apikey_subscription_validation = true
     #service_url = "https://localhost:${mgt.transport.https.port}/services/"
     #username = "$ref{super_admin.username}"
     #password = "$ref{super_admin.password}"
@@ -166,6 +173,7 @@ data:
     #signing_algorithm = "SHA256withRSA"
     #enable_user_claims = true
     #claims_extractor_impl = "org.wso2.carbon.apimgt.impl.token.ExtendedDefaultClaimsRetriever"
+    #use_sha256_hash = false
 
     #[apim.oauth_config]
     #enable_outbound_auth_header = false
@@ -188,6 +196,9 @@ data:
     #enable_anonymous_mode=true
     #enable_cross_tenant_subscriptions = true
     #default_reserved_username = "apim_reserved_user"
+
+    #[apim.publisher]
+    #enable_portal_configuration_only_mode = false
 
     [apim.cors]
     allow_origins = "*"
@@ -263,7 +274,7 @@ data:
     #enable_authentication = true
 
     #[apim.token.revocation]
-    #notifier_impl = "org.wso2.carbon.apimgt.keymgt.events.TokenRevocationNotifierImpl"
+    #notifier_impl = "org.wso2.carbon.apimgt.notification.TokenRevocationNotifierImpl"
     #enable_realtime_notifier = true
     #realtime_notifier.ttl = 5000
     #enable_persistent_notifier = true
@@ -293,9 +304,9 @@ data:
     [transport.https.properties]
     proxyPort = 443
 
-    [oauth.grant_type.token_exchange]	
-    enable = true	
-    allow_refresh_tokens = true	
+    [oauth.grant_type.token_exchange]
+    enable = true
+    allow_refresh_tokens = true
     iat_validity_period = "1h"
 
     [transport.passthru_https.sender.parameters]
