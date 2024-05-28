@@ -57,7 +57,7 @@ You can install the relevant Helm chart either from [WSO2 Helm Chart Repository]
  Helm version 2
 
  ```
- helm install --name <RELEASE_NAME> wso2/am-pattern-3 --version 4.3.0.1 --namespace <NAMESPACE>
+ helm install --name <RELEASE_NAME> wso2/am-pattern-3 --version 4.3.0-1 --namespace <NAMESPACE>
  ```
 
  Helm version 3
@@ -65,7 +65,7 @@ You can install the relevant Helm chart either from [WSO2 Helm Chart Repository]
  - Deploy the Kubernetes resources using the Helm Chart
  
     ```
-    helm install <RELEASE_NAME> wso2/am-pattern-3 --version 4.3.0.1 --namespace <NAMESPACE> --create-namespace
+    helm install <RELEASE_NAME> wso2/am-pattern-3 --version 4.3.0-1 --namespace <NAMESPACE> --create-namespace
     ```
 
 The above steps will deploy the deployment pattern using WSO2 product Docker images available in WSO2 Private Docker Registry. Please provide your WSO2 Subscription credentials via input values (using `--set` argument).
@@ -73,7 +73,7 @@ The above steps will deploy the deployment pattern using WSO2 product Docker ima
 Please see the following example.
 
 ```
- helm install --name <RELEASE_NAME> wso2/am-pattern-3 --version 4.3.0.1 --namespace <NAMESPACE> --set wso2.subscription.username=<SUBSCRIPTION_USERNAME> --set wso2.subscription.password=<SUBSCRIPTION_PASSWORD>
+ helm install --name <RELEASE_NAME> wso2/am-pattern-3 --version 4.3.0-1 --namespace <NAMESPACE> --set wso2.subscription.username=<SUBSCRIPTION_USERNAME> --set wso2.subscription.password=<SUBSCRIPTION_PASSWORD>
 ```
 
 If you are using a custom WSO2 Docker images you will need to provide those information via the input values. Please refer [API Manager Server Configurations](#api-manager-server-configurations) and [Micro Integrator Server Configurations](#micro-integrator-server-configurations)
@@ -97,7 +97,7 @@ git clone https://github.com/wso2/kubernetes-apim.git
  Helm version 2
 
  ```
- helm install --dep-up --name <RELEASE_NAME> <HELM_HOME>/am-pattern-3 --version 4.3.0.1 --namespace <NAMESPACE>
+ helm install --dep-up --name <RELEASE_NAME> <HELM_HOME>/am-pattern-3 --version 4.3.0-1 --namespace <NAMESPACE>
  ```
 
  Helm version 3
@@ -105,7 +105,7 @@ git clone https://github.com/wso2/kubernetes-apim.git
  - Deploy the Kubernetes resources using the Helm Chart
  
     ```
-    helm install <RELEASE_NAME> <HELM_HOME>/am-pattern-3 --version 4.3.0.1 --namespace <NAMESPACE> --dependency-update --create-namespace
+    helm install <RELEASE_NAME> <HELM_HOME>/am-pattern-3 --version 4.3.0-1 --namespace <NAMESPACE> --dependency-update --create-namespace
     ```
 
 The above steps will deploy the deployment pattern using WSO2 product Docker images available in WSO2 Private Docker Registry. Please provide your WSO2 Subscription credentials via input values (using `--set` argument).
@@ -113,7 +113,7 @@ The above steps will deploy the deployment pattern using WSO2 product Docker ima
 Please see the following example.
 
 ```
- helm install --name <RELEASE_NAME> <HELM_HOME>/am-pattern-3 --version 4.3.0.1 --namespace <NAMESPACE> --set wso2.subscription.username=<SUBSCRIPTION_USERNAME> --set wso2.subscription.password=<SUBSCRIPTION_PASSWORD>
+ helm install --name <RELEASE_NAME> <HELM_HOME>/am-pattern-3 --version 4.3.0-1 --namespace <NAMESPACE> --set wso2.subscription.username=<SUBSCRIPTION_USERNAME> --set wso2.subscription.password=<SUBSCRIPTION_PASSWORD>
 ```
 
 If you are using a custom WSO2 Docker images you will need to provide those information via the input values. Please refer [API Manager Server Configurations](#api-manager-server-configurations) and [Micro Integrator Server Configurations](#micro-integrator-server-configurations)
@@ -132,7 +132,7 @@ From the above Helm commands, base image of a Micro Integrator is deployed (with
     - `IMAGE_PULL_SECRET` will refer to the created image pull secret <br><br>
 >3. Deploy the helm resource using following command.<br><br>
 >   ```
->   helm install <RELEASE_NAME> wso2/am-pattern-3 --version 4.3.0.1 --namespace <NAMESPACE> --set wso2.deployment.mi.dockerRegistry=<INTEGRATION_IMAGE_REGISTRY> --set wso2.deployment.mi.imageName=<INTEGRATION_IMAGE_NAME> --set wso2.deployment.mi.imageTag=<INTEGRATION_IMAGE_TAG> --set wso2.deployment.mi.imagePullSecrets=<IMAGE_PULL_SECRET>
+>   helm install <RELEASE_NAME> wso2/am-pattern-3 --version 4.3.0-1 --namespace <NAMESPACE> --set wso2.deployment.mi.dockerRegistry=<INTEGRATION_IMAGE_REGISTRY> --set wso2.deployment.mi.imageName=<INTEGRATION_IMAGE_NAME> --set wso2.deployment.mi.imageTag=<INTEGRATION_IMAGE_TAG> --set wso2.deployment.mi.imagePullSecrets=<IMAGE_PULL_SECRET>
 >   ```     
 
 > **Note:**
@@ -149,13 +149,13 @@ The following example shows how to enable Analytics with the helm charts.
 Helm v2
 
 ```
-helm install --name <RELEASE_NAME> wso2/am-pattern-3 --version 4.3.0.1 --namespace <NAMESPACE> --set wso2.choreoAnalytics.enabled=true --set wso2.choreoAnalytics.endpoint=<CHOREO_ANALYTICS_ENDPOINT> --set wso2.choreoAnalytics.onpremKey=<ONPREM_KEY>
+helm install --name <RELEASE_NAME> wso2/am-pattern-3 --version 4.3.0-1 --namespace <NAMESPACE> --set wso2.choreoAnalytics.enabled=true --set wso2.choreoAnalytics.endpoint=<CHOREO_ANALYTICS_ENDPOINT> --set wso2.choreoAnalytics.onpremKey=<ONPREM_KEY>
 ```
 
 Helm v3
 
 ```
-helm install <RELEASE_NAME> wso2/am-pattern-3 --version 4.3.0.1 --namespace <NAMESPACE> --set wso2.choreoAnalytics.enabled=true --set wso2.choreoAnalytics.endpoint=<CHOREO_ANALYTICS_ENDPOINT> --set wso2.choreoAnalytics.onpremKey=<ONPREM_KEY> --create-namespace
+helm install <RELEASE_NAME> wso2/am-pattern-3 --version 4.3.0-1 --namespace <NAMESPACE> --set wso2.choreoAnalytics.enabled=true --set wso2.choreoAnalytics.endpoint=<CHOREO_ANALYTICS_ENDPOINT> --set wso2.choreoAnalytics.onpremKey=<ONPREM_KEY> --create-namespace
 ```
 
 You will be able to see the Analytics data when you log into Choreo Analytics Portal.
@@ -352,5 +352,5 @@ If you want to setup API Manager only without Micro Integrator, you have to inst
 * Deploy Helm charts
 
     ```helm
-    helm install <RELEASE_NAME> <HELM_HOME>/am-pattern-3 --version 4.3.0.1 --namespace <NAMESPACE> --dependency-update --create-namespace
+    helm install <RELEASE_NAME> <HELM_HOME>/am-pattern-3 --version 4.3.0-1 --namespace <NAMESPACE> --dependency-update --create-namespace
     ```
